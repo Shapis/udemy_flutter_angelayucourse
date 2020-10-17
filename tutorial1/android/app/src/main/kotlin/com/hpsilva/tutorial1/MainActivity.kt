@@ -1,4 +1,4 @@
-package com.example.tutorial1
+package com.hpsilva.tutorial1
 
 import io.flutter.embedding.android.FlutterActivity
 
