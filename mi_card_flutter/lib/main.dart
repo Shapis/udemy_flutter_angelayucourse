@@ -15,16 +15,27 @@ class MyApp extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50.0,
-                backgroundImage: AssetImage('images/swarms.png'),
+                backgroundImage: AssetImage('images/puppy.png'),
               ),
               Text(
-                'Tyler Hauth',
+                'Ashley Tolentino',
                 style: TextStyle(
+                  fontFamily: 'Pacifico',
                   fontSize: 40.0,
                   color: Colors.white,
+                  //fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'PROFESSIONAL PUPPY',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  color: Colors.teal[100],
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
             ],
           ),
         ),
