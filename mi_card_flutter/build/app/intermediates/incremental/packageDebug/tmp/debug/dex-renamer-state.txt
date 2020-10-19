@@ -1,4 +1,4 @@
-#Sun Oct 18 19:28:14 BRT 2020
+#Mon Oct 19 09:18:08 BRT 2020
 base.0=/home/hpsilva/Documents/Coding Projects/udemy_flutter_angelayucourse/mi_card_flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
