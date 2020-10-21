@@ -1,0 +1,4 @@
+#Wed Oct 21 17:14:52 BRT 2020
+base.0=/home/hpsilva/Documents/Coding Projects/udemy_flutter_angelayucourse/destini-challenge-starting/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
