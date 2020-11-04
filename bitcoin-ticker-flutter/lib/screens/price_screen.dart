@@ -1,4 +1,3 @@
-import 'package:bitcoin_ticker/services/coin.dart';
 import 'package:flutter/material.dart';
 import '../utilities/coin_data.dart' as coinData;
 import 'package:flutter/cupertino.dart';
@@ -12,7 +11,8 @@ class PriceScreen extends StatefulWidget {
 
 class _PriceScreenState extends State<PriceScreen> {
   String selectedCurrency = 'USD';
-  List<CoinCard> coinCardList = [];
+  Map<String, String> conversionValuesMap;
+  bool isWaiting = false;
 
   DropdownButton<String> androidDropdown() {
     List<DropdownMenuItem<String>> dropdownItems = [];
@@ -32,7 +32,7 @@ class _PriceScreenState extends State<PriceScreen> {
         setState(
           () {
             selectedCurrency = value;
-            updateCoinCards();
+            updateData();
           },
         );
       },
@@ -50,7 +50,7 @@ class _PriceScreenState extends State<PriceScreen> {
       itemExtent: 32.0,
       onSelectedItemChanged: (selectedIndex) {
         selectedCurrency = coinData.currenciesList[selectedIndex];
-        updateCoinCards();
+        //updateCoinCards();
       },
       children: pickerItems,
     );
@@ -59,51 +59,37 @@ class _PriceScreenState extends State<PriceScreen> {
   @override
   void initState() {
     super.initState();
-    generateCoinCards();
-    updateCoinCards();
+    updateData();
   }
 
-  void generateCoinCards() {
-    for (var item in coinData.cryptoList) {
-      coinCardList.add(CoinCard(
-          conversionRate: null,
-          selectedCurrency: selectedCurrency,
-          coinType: item));
-    }
-  }
-
-  void updateCoinCards() async {
-    List<CoinCard> myCoinCardList = [];
-    List<Future<dynamic>> futureCoinModelDataList = [];
-    List<num> currencyRateList = [];
-
-    for (var item in coinData.cryptoList) {
-      futureCoinModelDataList
-          .add(CoinModel().getCoinData(item, selectedCurrency));
-    }
-
-    for (var item in futureCoinModelDataList) {
-      var temp = await item;
-      num tempNum = temp['rate'];
-      double tempDouble = tempNum.toDouble();
-      currencyRateList.add(double.parse(tempDouble.toStringAsFixed(2)));
-    }
+  List<CoinCard> generateCoinCards() {
+    List<CoinCard> coinCardList = [];
 
     for (var i = 0; i < coinData.cryptoList.length; i++) {
-      myCoinCardList.add(CoinCard(
-        coinType: coinData.cryptoList[i],
-        conversionRate: currencyRateList[i],
-        selectedCurrency: selectedCurrency,
-      ));
+      coinCardList.add(
+        CoinCard(
+          conversionRate:
+              isWaiting ? null : conversionValuesMap[coinData.cryptoList[i]],
+          selectedCurrency: selectedCurrency,
+          coinType: coinData.cryptoList[i],
+        ),
+      );
     }
 
-    updateUI(myCoinCardList);
+    return coinCardList;
   }
 
-  void updateUI(List<CoinCard> myCoinCardList) {
-    setState(() {
-      coinCardList = myCoinCardList;
-    });
+  void updateData() async {
+    isWaiting = true;
+    try {
+      var data = await coinData.CoinData().getCoinData(selectedCurrency);
+      isWaiting = false;
+      setState(() {
+        conversionValuesMap = data;
+      });
+    } catch (err) {
+      print(err);
+    }
   }
 
   @override
@@ -118,7 +104,7 @@ class _PriceScreenState extends State<PriceScreen> {
           Column(
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: coinCardList,
+            children: generateCoinCards(),
           ),
           Container(
             height: 150.0,

@@ -8,7 +8,7 @@ class CoinCard extends StatelessWidget {
       @required this.coinType})
       : super(key: key);
 
-  final num conversionRate;
+  final String conversionRate;
   final String selectedCurrency;
   final String coinType;
 
