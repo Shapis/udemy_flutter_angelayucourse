@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
                 child: Divider(color: Colors.teal.shade100),
               ),
               Card(
-                margin: EdgeInsets.fromLTRB(25.0, 5.0, 25.0, 10.0),
+                margin: EdgeInsets.fromLTRB(32.0, 5.0, 31.0, 10.0),
                 child: ListTile(
                   leading: Icon(
                     Icons.phone,
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 31.0),
                 child: ListTile(
                   leading: Icon(
                     Icons.email,

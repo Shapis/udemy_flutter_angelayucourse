@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "722932569824",
+    "firebase_url": "https://flash-chat-fa53d.firebaseio.com",
+    "project_id": "flash-chat-fa53d",
+    "storage_bucket": "flash-chat-fa53d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722932569824:android:1d3bbe88dd1640b7506285",
+        "android_client_info": {
+          "package_name": "co.shapis.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722932569824-sjqdmfg8i5mtd35k8f06moskrtqjieeb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_qkhTZsAW-qGNcg4ZQltNKhi4IXaT5Dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722932569824-sjqdmfg8i5mtd35k8f06moskrtqjieeb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722932569824:android:ff1b292355851923506285",
+        "android_client_info": {
+          "package_name": "co.shapisftw.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722932569824-sjqdmfg8i5mtd35k8f06moskrtqjieeb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_qkhTZsAW-qGNcg4ZQltNKhi4IXaT5Dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722932569824-sjqdmfg8i5mtd35k8f06moskrtqjieeb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
