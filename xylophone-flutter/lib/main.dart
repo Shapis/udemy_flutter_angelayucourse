@@ -11,8 +11,9 @@ class XylophoneApp extends StatelessWidget {
 
   Expanded buildKey({Color color = Colors.red, int soundNumber = 1}) {
     return Expanded(
-      child: FlatButton(
-        color: color,
+      child: TextButton(
+        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color)),
+        child: const Text(''),
         onPressed: () {
           playSound(soundNumber);
         },
