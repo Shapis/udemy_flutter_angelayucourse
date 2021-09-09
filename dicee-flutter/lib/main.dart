@@ -38,19 +38,25 @@ class _DicePageState extends State<DicePage> {
       child: Row(
         children: [
           Expanded(
-            child: FlatButton(
-              onPressed: () {
-                randomizeDice();
-              },
-              child: Image.asset('images/dice$leftDiceNumber.png'),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  randomizeDice();
+                },
+                child: Image.asset('images/dice$leftDiceNumber.png'),
+              ),
             ),
           ),
           Expanded(
-            child: FlatButton(
-              onPressed: () {
-                randomizeDice();
-              },
-              child: Image.asset('images/dice$rightDiceNumber.png'),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  randomizeDice();
+                },
+                child: Image.asset('images/dice$rightDiceNumber.png'),
+              ),
             ),
           ),
         ],
