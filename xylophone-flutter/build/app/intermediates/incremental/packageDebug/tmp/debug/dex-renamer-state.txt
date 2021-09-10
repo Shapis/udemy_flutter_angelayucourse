@@ -1,4 +1,4 @@
-#Thu Sep 09 06:50:57 BRT 2021
+#Fri Sep 10 00:14:53 BRT 2021
 base.0=/home/hpsilva/Documents/coding_projects/udemy_flutter_angelayucourse/xylophone-flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
