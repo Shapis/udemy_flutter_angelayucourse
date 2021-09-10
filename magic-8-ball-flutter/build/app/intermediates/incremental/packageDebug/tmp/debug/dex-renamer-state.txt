@@ -1,4 +1,4 @@
-#Mon Oct 19 19:42:35 BRT 2020
-base.0=/home/hpsilva/Documents/Coding Projects/udemy_flutter_angelayucourse/magic-8-ball-flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
+#Thu Sep 09 06:48:28 BRT 2021
+base.0=/home/hpsilva/Documents/coding_projects/udemy_flutter_angelayucourse/magic-8-ball-flutter/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 renamed.0=classes.dex
+path.0=classes.dex
